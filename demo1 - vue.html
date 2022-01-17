@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="config/tDemoFirst - vue.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="body">
+    <header class="header">
+        <!--标题部分-->
+        <img src="pic/header_pic1.png">
+        <time class="time" id="time"></time>
+    </header>
+    <context class="context">
+        <!-- 输入框和确认按钮 -->
+        <box class="workArea" id="box">
+            <in class="int">
+                <input type="text" id="inText" v-model="message" @keyup.enter="addElm" placeholder="输入添加内容" />
+                <button class="add" @click="addElm">添加</button>
+            </in>
+            <todo id="todo" class="area">
+                <!-- 代办任务区 -->
+
+                <head class="head">·代办</head>
+                <li class="do" v-for="(item,index) in todoList">
+                    <!-- 序号索引区 -->
+                    <index>{{ index+1 }}.</index>
+                    <!-- 文本区，由切换显示来切换修改转态 -->
+                    <span class="p">
+                        <div class="p1" v-show=1 v-html=item></div>
+                        <div class="p1" v-html="rewrite" v-show=0 @keyup.enter="readdElm(index)"></div>
+                    </span>
+                    <!-- 下为图片功能区 -->
+                    <span v-html="fin_todo" @click="moveElm(index)"></span>
+                    <span v-html="rew_todo" @click="rewriteElm(item,index)"></span>
+                    <span v-html="del_todo" @click="deleteElm(todoList,index)"></span>
+                </li>
+            </todo>
+            <done id="done" class="area">
+                <!-- 已完成任务区 -->
+
+                <head class="head">·完成</head>
+                <li class="do" v-for="(item,index) in doneList">
+                    <index>{{ index+1 }}.</index>
+                    <span class="p">{{ item }}</span>
+                    <span v-html="del_done" @click="deleteElm(doneList,index)"></span>
+                </li>
+            </done>
+        </box>
+    </context>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script type="text/javascript" src="config/tDemoFirst - vue.js"></script>
+
+</body>
+
+</html>

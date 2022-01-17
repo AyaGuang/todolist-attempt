@@ -1,0 +1,148 @@
+.body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Microsoft Yahei Light", "Microsoft Yahei";
+}
+
+.header {
+    margin: 0 12px;
+    display: flex;
+    justify-content: flex-start;
+    height: 100px;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.time {
+    display: flex;
+    width: 140px;
+    margin: 32px 0;
+    font-size: 30px;
+    font-weight: inherit;
+    text-shadow: 0 0 20px rgb(0 0 0 / 35%);
+    line-height: 20px;
+    cursor: default;
+}
+
+.context {
+    background-image: url(../pic/beijing1.png);
+    height: 1000px;
+    width: 100%;
+    border-top-color: black;
+    border-top-style: solid;
+    border-top-width: 1px;
+}
+
+.workArea {
+    display: flex;
+    font-size: 30px;
+    font-family: "黑体";
+    flex-direction: column;
+    width: 900px;
+    height: 100%;
+    margin: 5px auto;
+    background: linear-gradient(to bottom right, rgb(173, 236, 247), rgb(248, 235, 180));
+    box-shadow: 3px 3px 6px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+}
+
+.int {
+    margin: 12px auto;
+    border: none;
+    width: 80%;
+    display: flex;
+}
+
+#inText {
+    margin: 12px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    width: 80%;
+    height: 30px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+#reinText {
+    border: none;
+    width: 80%;
+    font-size: 30px;
+}
+
+.add {
+    background: #27C18F;
+    color: #ffff;
+    margin: 0 0 0 24px;
+    border-radius: 5px;
+    cursor: pointer;
+    align-items: center;
+    border: none;
+    height: 30px;
+    width: 13%;
+    align-self: center;
+    justify-self: flex-end;
+}
+
+.do {
+    margin: 12px auto;
+    border-radius: 7px;
+    background: rgba(255, 255, 255, 1);
+    width: 95%;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+    position: relative;
+    padding: 6px 0;
+    display: flex;
+    flex-direction: row;
+    border-left-style: solid;
+    border-left-color: #34daa5;
+    border-left-width: 5px;
+}
+
+.p {
+    width: 90%;
+}
+
+.pic1 {
+    margin: auto 15px;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.area {
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+    margin: 12px auto;
+    border-radius: 15px;
+    width: 80%;
+}
+
+.head {
+    display: flex;
+}
+
+.btn1 {
+    background-color: white;
+    border: none;
+    font: 20px bold;
+    position: absolute;
+    right: 12px;
+    top: 14.5px;
+}
+
+.add:active {
+    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+    background-size: 400%;
+    animation: glow 8s linear infinite;
+}
+
+@keyframes glow {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 400%;
+    }
+}
